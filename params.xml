@@ -1,0 +1,50 @@
+<?xml version="1.0" ?> 
+<inputs>
+    <!-- ================================================================== -->
+    <!-- GEOMETRIC PARAMETERS -->
+    <!-- ================================================================== -->
+    <lx>            1       </lx>           <!-- nx = lx*resolution+1 --> 
+    <ly>            1       </ly>           <!-- ny = ly*resolution+1 --> 
+    <resolution>    20      </resolution>   <!-- Res --> 
+    <porosity>      .9       </porosity>    <!-- solid square = solid*resolution --> 
+    <solid>         1       </solid>        <!-- for debugguing square domain-->
+    <blobiness>     1       </blobiness>    <!-- solid square = solid*resolution --> 
+    <!-- ================================================================== -->
+    <!-- Charge Transport Lattice Parameters -->
+    <!-- ================================================================== -->
+    <tau_phi>       1.0     </tau_phi>     <!-- Relaxation time for CT lattice -->
+    <phi_init>      0.0     </phi_init>     <!-- Initial electrolyte potential -->
+    <K_0>           0.9     </K_0>          <!-- Rest Fraction for CT lattice -->
+    <inletFlux>     .5     </inletFlux>    <!-- Inlet Flux at south boundary -->
+    <!-- ================================================================== -->
+    <!-- Navier Stokes Lattice Parameters -->
+    <!-- ================================================================== -->
+    <Re>            10.0    </Re>           <!-- Reynolds Number -->
+    <uMax>          0.0086  </uMax>         <!-- Lattice Velocity -->
+    <tau>           1.32818 </tau>          <!-- Relaxation time NS Lattice--> 
+    <!-- ================================================================== -->
+    <!-- Solute Transport Lattice Parameters -->
+    <!-- ================================================================== -->
+    <tau_ad>        1.2     </tau_ad>       <!-- Relaxation time AD Lattice--> 
+    <Temperature>   300     </Temperature>  <!-- Temperature --> 
+    <J>             0.0     </J>            <!-- Rest Fraction --> 
+    <c_init>        2.0     </c_init>       <!-- Concentration at left boundary --> 
+    <SoC>           0.9     </SoC>          <!-- SoC at the inlet --> 
+    <Da_anode>      1.0     </Da_anode>     <!-- Damkohler anode --> 
+    <Da_cathode>    1.0     </Da_cathode>   <!-- Damkohler cathode--> 
+    <eta>           0.08    </eta>          <!-- Overpotential --> 
+    <newtonIter>    20      </newtonIter>   <!-- Maximum number of iterations --> 
+    <thresh>        1e-12   </thresh>       <!-- Newton's Method Convergence thresh --> 
+    <min_conc>      1e-6    </min_conc>     <!-- If the concentration drops below this level it will be deinfed as zero and the converse concentration will be c_init -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <C_0>           1.0     </C_0>          <!-- Concentration at left boundary --> 
+    <C_eq>          0.0     </C_eq>         <!-- Saturation Concnetration --> 
+    <kr>            1.0    </kr>           <!-- Rate Constant --> 
+    <!-- ================================================================== -->
+    <!-- TIME STEPPING -->
+    <!-- ================================================================== -->
+    <maxIter>       1000     </maxIter>      <!-- maximum iterations -->
+    <epsilon>       .1      </epsilon>      <!-- convergence precision -->
+    <convergenceIter> 100 </convergenceIter>   <!-- Output Frequency -->
+</inputs> 
+
